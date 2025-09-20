@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Weather App</title>
+  <style>
+    body {
+        background: linear-gradient(135deg, #00b4db, #0083b0);
+        color: #333;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        backdrop-filter: blur(10px);
+    }
+
+    h1 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: #2c3e50;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .weather-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+        align-items: center;
+    }
+
+    .weather-form input {
+        background: #f8f9fa;
+        color: #333;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 12px 20px;
+        font-size: 16px;
+        width: 80%;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    .weather-form input:focus {
+        border-color: #0083b0;
+        box-shadow: 0 0 0 3px rgba(0, 131, 176, 0.1);
+    }
+
+    .weather-form button {
+        background: #0083b0;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 60%;
+        font-weight: 500;
+    }
+
+    .weather-form button:hover {
+        background: #00b4db;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 131, 176, 0.2);
+    }
+
+    .weather-result {
+        margin-top: 25px;
+        font-size: 18px;
+        color: #2c3e50;
+        min-height: 24px;
+        border-top: 2px solid #f0f2f5;
+        padding-top: 20px;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 20px;
+        }
+        
+        .weather-form input,
+        .weather-form button {
+            width: 90%;
+        }
+    }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Simple Weather Checker</h1>
+    <div class="weather-form">
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button id="getWeatherBtn">Check Weather</button>
+    </div>
+    <div id="weatherResult" class="weather-result"></div>
+  </div>
+  <script>
+    // Hardcoded weather data for demo
+    const weatherData = {
+      Surat: { temp: 22, desc: "Sunny" },
+      surat: { temp: 22, desc: "Sunny" },
+      Ahemdabad: { temp: 18, desc: "Cloudy" },
+      ahemdabad: { temp: 18, desc: "Cloudy" },
+      Vadodra: { temp: 20, desc: "Partly Cloudy" },
+      vadodara: { temp: 20, desc: "Partly Cloudy" },
+      Nadiad: { temp: 25, desc: "Clear" },
+      nadiad: { temp: 25, desc: "Clear" },
+      Mumbai: { temp: 30, desc: "Humid" },
+      Anand: { temp: 30, desc: "Humid" },
+      anand: { temp: 30, desc: "Humid" }
+    };
+
+    const cityInput = document.getElementById("cityInput");
+    const getWeatherBtn = document.getElementById("getWeatherBtn");
+    const weatherResult = document.getElementById("weatherResult");
+
+    getWeatherBtn.addEventListener("click", () => {
+      const city = cityInput.value.trim();
+      if (!city) {
+        weatherResult.textContent = "Please enter a city name.";
+        return;
+      }
+      const weather = weatherData[city];
+      if (weather) {
+        weatherResult.textContent = `${city}: ${weather.temp}°C, ${weather.desc}`;
+      } else {
+        weatherResult.textContent = `Weather data for '${city}' not found.`;
+      }
+    });
+
+    cityInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        getWeatherBtn.click();
+      }
+    });
+  </script>
+</body>
+
+</html>
