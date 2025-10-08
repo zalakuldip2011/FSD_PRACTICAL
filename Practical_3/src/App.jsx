@@ -27,132 +27,119 @@ function App() {
     if (timeZone === "local") {
       return date;
     } else if (timeZone === "utc") {
-      return new Date(date.getTime() + date.getTimezoneOffset() * 60000);
+      return new Date(date.getTime() + (date.getTimezoneOffset() * 60000));
     }
     return date;
   };
 
   const displayDate = getDisplayTime();
 
-  const formattedDate = displayDate.toLocaleDateString("en-US", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+  const formattedDate = displayDate.toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   });
 
-  const formattedTime = displayDate.toLocaleTimeString("en-US", {
+  const formattedTime = displayDate.toLocaleTimeString('en-US', {
     hour12: true,
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
   });
 
-  // Modern Dark Theme Styling
+  // Basic black and white styling for beginners
   const containerStyle = {
     minHeight: "100vh",
-    background: "linear-gradient(135deg, #1e1e2f, #121212)",
+    background: "white",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "Arial, sans-serif",
     margin: "0",
-    padding: "20px",
+    padding: "20px"
   };
 
   const cardStyle = {
-    background: "#1f1f2e",
-    border: "1px solid #333",
-    borderRadius: "16px",
+    background: "white",
+    border: "2px solid black",
     padding: "30px",
     maxWidth: "500px",
     width: "100%",
-    textAlign: "center",
-    color: "#f0f0f0",
-    boxShadow: "0 8px 20px rgba(0,0,0,0.5)",
+    textAlign: "center"
   };
 
   const titleStyle = {
-    fontSize: "26px",
-    fontWeight: "700",
-    color: "#ffffff",
-    marginBottom: "20px",
-    letterSpacing: "1px",
+    fontSize: "24px",
+    fontWeight: "bold",
+    color: "black",
+    marginBottom: "20px"
   };
 
   const greetingStyle = {
-    fontSize: "20px",
-    color: "#00d1b2",
+    fontSize: "18px",
+    color: "black",
     marginBottom: "15px",
-    fontWeight: "600",
+    fontWeight: "bold"
   };
 
   const dateStyle = {
     fontSize: "16px",
-    color: "#bbb",
-    marginBottom: "10px",
+    color: "black",
+    marginBottom: "10px"
   };
 
   const timeStyle = {
-    fontSize: "22px",
-    color: "#fff",
+    fontSize: "20px",
+    color: "black",
     fontWeight: "bold",
     marginBottom: "20px",
-    fontFamily: "monospace",
+    fontFamily: "monospace"
   };
 
   const buttonGroupStyle = {
     display: "flex",
-    gap: "12px",
+    gap: "10px",
     justifyContent: "center",
-    marginTop: "20px",
+    marginTop: "20px"
   };
 
   const buttonStyle = {
-    background: "#2b2b40",
-    color: "#ddd",
-    border: "1px solid #444",
-    borderRadius: "8px",
-    padding: "10px 18px",
+    background: "white",
+    color: "black",
+    border: "1px solid black",
+    padding: "10px 15px",
     fontSize: "14px",
-    cursor: "pointer",
-    transition: "all 0.3s ease",
+    cursor: "pointer"
   };
 
   const activeButtonStyle = {
     ...buttonStyle,
-    background: "#00d1b2",
-    color: "#fff",
-    border: "1px solid #00d1b2",
+    background: "black",
+    color: "white"
   };
 
   return (
     <div style={containerStyle}>
       <div style={cardStyle}>
-        <h1 style={titleStyle}>🌟 Welcome to Charusat!</h1>
-        <div style={greetingStyle}>{greeting} 👋</div>
+        <h1 style={titleStyle}>Welcome to Charusat!!</h1>
+        <div style={greetingStyle}>{greeting}!</div>
         <div style={dateStyle}>{formattedDate}</div>
         <div style={timeStyle}>{formattedTime}</div>
         <div style={buttonGroupStyle}>
           <button
             style={timeZone === "local" ? activeButtonStyle : buttonStyle}
             onClick={() => setTimeZone("local")}
-            onMouseEnter={(e) => (e.target.style.background = "#00d1b2")}
-            onMouseLeave={(e) =>
-              (e.target.style.background =
-                timeZone === "local" ? "#00d1b2" : "#2b2b40")
-            }
+            onMouseEnter={(e) => e.target.style.background = "black"}
+            onMouseLeave={(e) => e.target.style.background = timeZone === "local" ? "black" : "white"}
           >
             Local Time
           </button>
           <button
             style={timeZone === "utc" ? activeButtonStyle : buttonStyle}
             onClick={() => setTimeZone("utc")}
-            onMouseEnter={(e) => (e.target.style.background = "#00d1b2")}
-            onMouseLeave={(e) =>
-              (e.target.style.background =
-                timeZone === "utc" ? "#00d1b2" : "#2b2b40")
-            }
+            onMouseEnter={(e) => e.target.style.background = "black"}
+            onMouseLeave={(e) => e.target.style.background = timeZone === "utc" ? "black" : "white"}
           >
             UTC Time
           </button>

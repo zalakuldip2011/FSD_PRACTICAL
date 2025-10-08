@@ -10,33 +10,31 @@ function App() {
   const handleDecrement = () => setCount(count - 1);
   const handleIncrementFive = () => setCount(count + 5);
 
-  // Decent modern styling
+  // Basic black and white styling for beginners
   const containerStyle = {
     minHeight: "100vh",
-    background: "#f5f6fa",
+    background: "white",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontFamily: "'Segoe UI', sans-serif",
+    fontFamily: "Arial, sans-serif",
     margin: "0",
     padding: "20px"
   };
 
   const cardStyle = {
-    background: "#ffffff",
-    border: "1px solid #ddd",
-    borderRadius: "12px",
+    background: "white",
+    border: "2px solid black",
     padding: "30px",
     maxWidth: "400px",
     width: "100%",
-    textAlign: "center",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.05)"
+    textAlign: "center"
   };
 
   const titleStyle = {
     fontSize: "28px",
-    fontWeight: "600",
-    color: "#333",
+    fontWeight: "bold",
+    color: "black",
     marginBottom: "20px"
   };
 
@@ -49,20 +47,18 @@ function App() {
   };
 
   const buttonStyle = {
-    background: "#f0f0f0",
-    color: "#333",
-    border: "1px solid #ccc",
-    borderRadius: "6px",
+    background: "white",
+    color: "black",
+    border: "1px solid black",
     padding: "10px 15px",
     fontSize: "14px",
-    cursor: "pointer",
-    transition: "all 0.3s ease"
+    cursor: "pointer"
   };
 
   const sectionTitleStyle = {
     fontSize: "20px",
-    fontWeight: "600",
-    color: "#444",
+    fontWeight: "bold",
+    color: "black",
     marginBottom: "15px",
     marginTop: "20px"
   };
@@ -75,32 +71,29 @@ function App() {
   const labelStyle = {
     display: "inline-block",
     fontSize: "14px",
-    color: "#555",
+    color: "black",
     marginRight: "10px",
     minWidth: "90px",
-    fontWeight: "500"
+    fontWeight: "bold"
   };
 
   const inputStyle = {
-    background: "#fff",
-    color: "#333",
-    border: "1px solid #ccc",
-    borderRadius: "6px",
+    background: "white",
+    color: "black",
+    border: "1px solid black",
     padding: "8px 12px",
     fontSize: "14px",
     outline: "none",
-    width: "200px",
-    transition: "border 0.2s ease"
+    width: "200px"
   };
 
   const outputStyle = {
     marginTop: "20px",
     fontSize: "14px",
-    color: "#333",
+    color: "black",
     textAlign: "center",
-    background: "#fafafa",
-    border: "1px solid #ddd",
-    borderRadius: "6px",
+    background: "white",
+    border: "1px solid black",
     padding: "15px"
   };
 
@@ -113,32 +106,56 @@ function App() {
           <button
             style={buttonStyle}
             onClick={handleReset}
-            onMouseEnter={(e) => (e.target.style.background = "#e0e0e0")}
-            onMouseLeave={(e) => (e.target.style.background = "#f0f0f0")}
+            onMouseEnter={(e) => {
+              e.target.style.background = "black";
+              e.target.style.color = "white";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = "white";
+              e.target.style.color = "black";
+            }}
           >
             Reset
           </button>
           <button
             style={buttonStyle}
             onClick={handleIncrement}
-            onMouseEnter={(e) => (e.target.style.background = "#e0e0e0")}
-            onMouseLeave={(e) => (e.target.style.background = "#f0f0f0")}
+            onMouseEnter={(e) => {
+              e.target.style.background = "black";
+              e.target.style.color = "white";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = "white";
+              e.target.style.color = "black";
+            }}
           >
             Increment
           </button>
           <button
             style={buttonStyle}
             onClick={handleDecrement}
-            onMouseEnter={(e) => (e.target.style.background = "#e0e0e0")}
-            onMouseLeave={(e) => (e.target.style.background = "#f0f0f0")}
+            onMouseEnter={(e) => {
+              e.target.style.background = "black";
+              e.target.style.color = "white";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = "white";
+              e.target.style.color = "black";
+            }}
           >
             Decrement
           </button>
           <button
             style={buttonStyle}
             onClick={handleIncrementFive}
-            onMouseEnter={(e) => (e.target.style.background = "#e0e0e0")}
-            onMouseLeave={(e) => (e.target.style.background = "#f0f0f0")}
+            onMouseEnter={(e) => {
+              e.target.style.background = "black";
+              e.target.style.color = "white";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = "white";
+              e.target.style.color = "black";
+            }}
           >
             Increment 5
           </button>
@@ -153,8 +170,12 @@ function App() {
             style={inputStyle}
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
-            onFocus={(e) => (e.target.style.border = "1px solid #007bff")}
-            onBlur={(e) => (e.target.style.border = "1px solid #ccc")}
+            onFocus={(e) => {
+              e.target.style.borderWidth = "2px";
+            }}
+            onBlur={(e) => {
+              e.target.style.borderWidth = "1px";
+            }}
             autoComplete="off"
           />
         </div>
@@ -166,8 +187,12 @@ function App() {
             style={inputStyle}
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
-            onFocus={(e) => (e.target.style.border = "1px solid #007bff")}
-            onBlur={(e) => (e.target.style.border = "1px solid #ccc")}
+            onFocus={(e) => {
+              e.target.style.borderWidth = "2px";
+            }}
+            onBlur={(e) => {
+              e.target.style.borderWidth = "1px";
+            }}
             autoComplete="off"
           />
         </div>

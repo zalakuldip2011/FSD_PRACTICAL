@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">TechStore</a>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/product">Products</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="margin: 2rem 0; text-align: center; font-size: 2.5rem;">Our Premium Products</h1>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&h=300&fit=crop" alt="Smart Watch" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Smart Watch Pro</h3>
+                    <p class="product-description">Latest smartwatch with health tracking, GPS, and 7-day battery life</p>
+                    <p class="product-price">$299.99</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Wireless Headphones" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Premium Headphones</h3>
+                    <p class="product-description">Noise cancelling wireless headphones with superior sound quality</p>
+                    <p class="product-price">$199.99</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop" alt="Smartphone" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Smartphone X Pro</h3>
+                    <p class="product-description">Latest flagship smartphone with triple camera and 5G connectivity</p>
+                    <p class="product-price">$899.99</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400&h=300&fit=crop" alt="Gaming Laptop" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Gaming Laptop Pro</h3>
+                    <p class="product-description">High-performance gaming laptop with RTX graphics and fast SSD</p>
+                    <p class="product-price">$1299.99</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=400&h=300&fit=crop" alt="Wireless Earbuds" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">True Wireless Earbuds</h3>
+                    <p class="product-description">Premium wireless earbuds with active noise cancellation</p>
+                    <p class="product-price">$149.99</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=400&h=300&fit=crop" alt="Smart Speaker" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Smart Speaker Pro</h3>
+                    <p class="product-description">Voice-controlled smart speaker with premium sound and smart home control</p>
+                    <p class="product-price">$129.99</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop" alt="Tablet" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pro Tablet</h3>
+                    <p class="product-description">Professional tablet with stylus support and all-day battery</p>
+                    <p class="product-price">$599.99</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=400&h=300&fit=crop" alt="Gaming Mouse" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Gaming Mouse Pro</h3>
+                    <p class="product-description">High-precision gaming mouse with RGB lighting and programmable buttons</p>
+                    <p class="product-price">$79.99</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=300&fit=crop" alt="Webcam" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">4K Webcam</h3>
+                    <p class="product-description">Ultra HD webcam with auto-focus and built-in microphone</p>
+                    <p class="product-price">$99.99</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem 0; margin-top: 3rem; background: var(--white); border-top: 1px solid #eee;">
+        <div class="container">
+            <p>&copy; 2025 TechStore. All rights reserved. | Premium Tech Products</p>
+        </div>
+    </footer>
+</body>
+</html>
+            color: #333;
+        }
+        
+        .product-category {
+            background: #e9ecef;
+            color: #6c757d;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stars {
+            color: #ffc107;
+            font-size: 1.5rem;
+        }
+        
+        .rating-text {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .product-price {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #28a745;
+            margin-bottom: 2rem;
+        }
+        
+        .product-description {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .features {
+            margin-bottom: 2rem;
+        }
+        
+        .features h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features li {
+            padding: 0.5rem 0;
+            color: #666;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .features li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: 600;
+            position: absolute;
+            left: 0;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            background: #28a745;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #28a745;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+            
+            .product-info h1 {
+                font-size: 2rem;
+            }
+            
+            .product-price {
+                font-size: 2rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">🛒 TechMart</a>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a> / <a href="/">Products</a> / <%= product.name %>
+        </div>
+    </section>
+
+    <section class="product-detail">
+        <div class="container">
+            <a href="/" class="back-link">← Back to Products</a>
+            
+            <div class="product-container">
+                <div class="product-image">
+                    <span class="product-icon"><%= product.image %></span>
+                </div>
+                
+                <div class="product-info">
+                    <h1><%= product.name %></h1>
+                    <span class="product-category"><%= product.category %></span>
+                    
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text"><%= product.rating %> out of 5</span>
+                    </div>
+                    
+                    <div class="product-price"><%= product.price %></div>
+                    
+                    <p class="product-description"><%= product.description %></p>
+                    
+                    <div class="features">
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li>Premium build quality and materials</li>
+                            <li>Latest technology and innovation</li>
+                            <li>Comprehensive warranty coverage</li>
+                            <li>Free shipping and easy returns</li>
+                            <li>24/7 customer support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn">Add to Cart</button>
+                        <button class="btn btn-secondary">Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
